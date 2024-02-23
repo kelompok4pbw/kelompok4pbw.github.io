@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var searchResult = document.getElementById('search-result');
 
     var komikData = [
-        { title: 'Miiko', rating: '4.5/5', stars: 4.5, image: 'img/6.jpg' },
-        { title: 'Naruto', rating: '3.5/5', stars: 3.5, image: 'img/2.jpg' },
-        { title: 'Doraemon', rating: '4.5/5', stars: 4.5, image: 'img/1.jpg' },
-        { title: 'Detective Conan', rating: '5/5', stars: 5, image: 'img/4.jpg' },
-        { title: 'Si Juki', rating: '4/5', stars: 4, image: 'img/5.jpg' }
+        { title: 'Fly Me To The Moon', rating: '4.5/5', stars: 4.5, image: 'img/flyMeToTheMoon.jpg' },
+        { title: 'Flesh Out', rating: '3.5/5', stars: 3.5, image: 'img/fleshOut.jpg' },
+        { title: 'Detective Conan Vol.15', rating: '4.5/5', stars: 4.5, image: 'img/detektifConan.jpg' },
+        { title: 'Death Note', rating: '5/5', stars: 5, image: 'img/deathNote.jpg' },
+        { title: 'Kaoru & Rin', rating: '4/5', stars: 4, image: 'img/kaoruRin.jpg' }
     ];
 
     searchInput.addEventListener('input', function () {
