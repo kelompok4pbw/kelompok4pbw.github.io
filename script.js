@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Materialize components
     M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), { coverTrigger: false});
-    M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    M.Sidenav.init(document.querySelectorAll('.sidenav'), {edge: 'right'});
     // Function to add or remove materialboxed class from all images
     function toggleMaterialboxed(add) {
         document.querySelectorAll('.komik img').forEach(img => {
@@ -51,7 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { title: 'Flesh Out', rating: '3.5/5', stars: 3.5, image: 'img/fleshOut.jpg' },
         { title: 'Detective Conan Vol.15', rating: '4.5/5', stars: 4.5, image: 'img/detektifConan.jpg' },
         { title: 'Death Note', rating: '5/5', stars: 5, image: 'img/deathNote.jpg' },
-        { title: 'Kaoru & Rin', rating: '4/5', stars: 4, image: 'img/kaoruRin.jpg' }
+        { title: 'Kaoru & Rin', rating: '4/5', stars: 4, image: 'img/kaoruRin.jpg' },
+        { title: 'Aladdin', rating: '5/5', stars: 5, image: 'img/aladdin.jpg' }
     ];
 
     searchInput.addEventListener('input', function () {
