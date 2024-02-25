@@ -1,8 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Materialize components
-    M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), { coverTrigger: false});
     M.Sidenav.init(document.querySelectorAll('.sidenav'), {edge: 'right'});
-    // Function to add or remove materialboxed class from all images
+
+    M.FormSelect.init(document.querySelectorAll('select'));
+    
+    var dropdown = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(dropdown, {
+        onCloseStart: function() {
+            var dropdownArrow = document.querySelector('.dropdown-arrow-trigger');
+            dropdownArrow.innerText = 'arrow_drop_down';
+        },
+        coverTrigger: false
+    });
+
+    dropdown.forEach(function(drop) {
+        drop.addEventListener('click', function() {
+            var dropdownArrow = document.querySelector('.dropdown-arrow-trigger');
+            var instance = M.Dropdown.getInstance(drop);
+            if (instance && instance.isOpen) {
+                dropdownArrow.innerText = 'arrow_drop_up';
+            }
+        });
+    });
+
     function toggleMaterialboxed(add) {
         document.querySelectorAll('.komik img').forEach(img => {
             if (add) {
@@ -11,35 +31,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.classList.remove('materialboxed');
             }
         });
-        // Reinitialize all materialboxed elements
         M.Materialbox.init(document.querySelectorAll('.materialboxed'));
     }
 
-    // Function to handle image click
     function onImageClick(event) {
-        // Remove materialboxed class from all other images
         toggleMaterialboxed(false);
 
-        // Add materialboxed class to the clicked image and initialize it
         event.target.classList.add('materialboxed');
         let instance = M.Materialbox.init(event.target);
 
-        // Open the materialbox for the clicked image
         instance.open();
         event.target.addEventListener('click', function (e) {
-            // Check if the Materialbox is open before trying to close it
             if (instance.isOpen) {
                 instance.close();
             }
         });
     }
 
-    // Attach click event to all images
     document.querySelectorAll('.komik-container .komik img').forEach(img => {
         img.addEventListener('click', onImageClick);
     });
 
-    // Initial setup to add materialboxed class to all images
     toggleMaterialboxed(true);
 
     var searchInput = document.getElementById('search-input');
