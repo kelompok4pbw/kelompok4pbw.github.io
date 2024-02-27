@@ -33,8 +33,9 @@
                         </a></li>
                     </ul>
                     <ul id="dropdown1" class="dropdown-content">
-                        <li><a href="https://kelompok4pbw.github.io/form-komik/">Tambah Komik</a></li>
-                        <li><a href="https://kelompok4pbw.github.io/form-pinjam/">Tambah Peminjam</a></li>
+                        <li class="divider blue lighten-5" tabindex="-1"></li>
+                        <li class="indigo darken-4"><a class="white-text" href="https://kelompok4pbw.github.io/form-komik/">Tambah Komik</a></li>
+                        <li class="indigo darken-4"><a class="white-text" href="https://kelompok4pbw.github.io/form-pinjam/">Tambah Peminjam</a></li>
                     </ul>
                 </div>
             </nav>
@@ -49,21 +50,28 @@
         </ul>
     </header>
 
-    <main class="main-container">
-        <h2 class="white-text">Komik Teratas</h2>
+    <main class="main-container indigo accent-1">
+        <h2 class="indigo-text text-darken-4">Komik Teratas</h2>
 
-        <div class="search-container">
-
-            <input type="text" id="search-input" placeholder="Search Komik...">
-            <p id="search-result"></p>
-        </div>
+        <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">search</i>
+                  <input type="text" id="search-input" class="materialize-textarea">
+                  <label for="search-input" class="indigo-text text-darken-4">Cari Komik</label>
+                  <span id="search-result"></span>
+                </div>
+              </div>
+            </form>
+          </div>
 
         <section class="daftar-komik">
             <div class="komik-container">
                 <div class="komik" data-index="0">
                     <img src="img/flyMeToTheMoon.jpg" alt="Fly Me To The Moon" class="materialboxed" >
-                    <p>Fly Me To The Moon</p>
-                    <div class="rating">Rating: 4.5/5</div>
+                    <p class="indigo-text text-accent-1">Fly Me To The Moon</p>
+                    <div class="rating indigo-text text-accent-1">Rating: 4.5/5</div>
                     <div class="stars">
                         <i class="material-icons">star</i>
                         <i class="material-icons">star</i>
@@ -74,8 +82,8 @@
                 </div>
                 <div class="komik" data-index="1">
                     <img src="img/fleshOut.jpg" alt="Flesh Out" class="materialboxed">
-                    <p>Flesh Out</p>
-                    <div class="rating">Rating: 3.5/5</div>
+                    <p class="indigo-text text-accent-1">Flesh Out</p>
+                    <div class="rating indigo-text text-accent-1">Rating: 3.5/5</div>
                     <div class="stars">
                         <i class="material-icons">star</i>
                         <i class="material-icons">star</i>
@@ -86,8 +94,8 @@
                 </div>
                 <div class="komik" data-index="2">
                     <img src="img/detektifConan.jpg" alt="Detective Conan Vol.15" class="materialboxed">
-                    <p>Detective Conan Vol.15</p>
-                    <div class="rating">Rating: 4.5/5</div>
+                    <p class="indigo-text text-accent-1">Detective Conan Vol.15</p>
+                    <div class="rating indigo-text text-accent-1">Rating: 4.5/5</div>
                     <div class="stars">
                         <i class="material-icons">star</i>
                         <i class="material-icons">star</i>
@@ -98,8 +106,8 @@
                 </div>
                 <div class="komik" data-index="3">
                     <img src="img/deathNote.jpg" alt="Death Note" class="materialboxed">
-                    <p>Death Note</p>
-                    <div class="rating">Rating: 4.5/5</div>
+                    <p class="indigo-text text-accent-1">Death Note</p>
+                    <div class="rating indigo-text text-accent-1">Rating: 4.5/5</div>
                     <div class="stars">
                         <i class="material-icons">star</i>
                         <i class="material-icons">star</i>
@@ -110,8 +118,8 @@
                 </div>
                 <div class="komik" data-index="4">
                     <img src="img/kaoruRin.jpg" alt="Kaoru & Rin" class="materialboxed">
-                    <p>Kaoru & Rin</p>
-                    <div class="rating">Rating: 4/5</div>
+                    <p class="indigo-text text-accent-1">Kaoru & Rin</p>
+                    <div class="rating indigo-text text-accent-1">Rating: 4/5</div>
                     <div class="stars">
                         <i class="material-icons">star</i>
                         <i class="material-icons">star</i>
@@ -122,8 +130,8 @@
                 </div>
                 <div class="komik" data-index="5">
                     <img src="img/aladdin.jpg" alt="Aladdin" class="materialboxed">
-                    <p>Aladdin</p>
-                    <div class="rating">Rating: 5/5</div>
+                    <p class="indigo-text text-accent-1">Aladdin</p>
+                    <div class="rating indigo-text text-accent-1">Rating: 5/5</div>
                     <div class="stars">
                         <i class="material-icons">star</i>
                         <i class="material-icons">star</i>
